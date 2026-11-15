@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop the NATIVE THREADS collection - sustainable fashion for every occasion.">
+    <title>Shop | NATIVE THREADS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">NATIVE<span>THREADS</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" aria-current="page">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+            <div class="cart-icon" aria-label="Shopping cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shop-header">
+            <div>
+                <h1 class="section-title" style="text-align: left; margin-bottom: 0.5rem;">Shop Collection</h1>
+                <p style="color: #666;">Discover our full range of sustainable fashion.</p>
+            </div>
+        </section>
+
+        <section aria-label="Product filters">
+            <form class="filter-form" action="shop.html" method="get">
+                <div class="filter-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category">
+                        <option value="all">All Categories</option>
+                        <option value="t-shirts">T-Shirts</option>
+                        <option value="denim">Denim</option>
+                        <option value="shirts">Shirts</option>
+                        <option value="knitwear">Knitwear</option>
+                        <option value="outerwear">Outerwear</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="size">Size</label>
+                    <select id="size" name="size">
+                        <option value="all">All Sizes</option>
+                        <option value="xs">XS</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="color">Color</label>
+                    <select id="color" name="color">
+                        <option value="all">All Colors</option>
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="grey">Grey</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price">Max Price: <span id="priceValue">$200</span></label>
+                    <input type="range" id="price" name="price" min="0" max="200" step="10" value="200">
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Sort By</label>
+                    <select id="sort" name="sort">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A-Z</option>
+                    </select>
+                </div>
+                <button type="submit" class="filter-btn">Apply Filters</button>
+            </form>
+        </section>
+
+        <section aria-label="Product results">
+            <div class="products-grid" id="productsGrid">
+                <article class="product-card" data-category="t-shirts" data-price="45" data-name="Organic Cotton Tee" data-color="white">
+                    <a href="product-detail.html?id=organic-cotton-tee">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop" alt="Organic Cotton T-Shirt in natural white" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">T-Shirts</p>
+                        <h3 class="product-name">Organic Cotton Tee</h3>
+                        <p class="product-price">$45.00</p>
+                        <button class="add-to-cart" data-product="organic-cotton-tee" data-price="45" data-name="Organic Cotton Tee" data-image="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="denim" data-price="125" data-name="Hemp Blend Jeans" data-color="blue">
+                    <a href="product-detail.html?id=hemp-blend-jeans">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=400&fit=crop" alt="Hemp blend denim jeans in indigo blue" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">Denim</p>
+                        <h3 class="product-name">Hemp Blend Jeans</h3>
+                        <p class="product-price">$125.00</p>
+                        <button class="add-to-cart" data-product="hemp-blend-jeans" data-price="125" data-name="Hemp Blend Jeans" data-image="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="shirts" data-price="85" data-name="Linen Button-Down" data-color="green">
+                    <a href="product-detail.html?id=linen-button-down">
+                        <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&h=400&fit=crop" alt="Linen button-down shirt in sage green" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">Shirts</p>
+                        <h3 class="product-name">Linen Button-Down</h3>
+                        <p class="product-price">$85.00</p>
+                        <button class="add-to-cart" data-product="linen-button-down" data-price="85" data-name="Linen Button-Down" data-image="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="knitwear" data-price="145" data-name="Recycled Wool Sweater" data-color="grey">
+                    <a href="product-detail.html?id=recycled-wool-sweater">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop" alt="Recycled wool sweater in charcoal grey" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">Knitwear</p>
+                        <h3 class="product-name">Recycled Wool Sweater</h3>
+                        <p class="product-price">$145.00</p>
+                        <button class="add-to-cart" data-product="recycled-wool-sweater" data-price="145" data-name="Recycled Wool Sweater" data-image="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="outerwear" data-price="195" data-name="Recycled Down Jacket" data-color="black">
+                    <a href="product-detail.html?id=recycled-down-jacket">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop" alt="Recycled down jacket in black" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">Outerwear</p>
+                        <h3 class="product-name">Recycled Down Jacket</h3>
+                        <p class="product-price">$195.00</p>
+                        <button class="add-to-cart" data-product="recycled-down-jacket" data-price="195" data-name="Recycled Down Jacket" data-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="t-shirts" data-price="55" data-name="Merino Crew Neck" data-color="black">
+                    <a href="product-detail.html?id=merino-crew-neck">
+                        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop" alt="Merino wool crew neck t-shirt in black" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">T-Shirts</p>
+                        <h3 class="product-name">Merino Crew Neck</h3>
+                        <p class="product-price">$55.00</p>
+                        <button class="add-to-cart" data-product="merino-crew-neck" data-price="55" data-name="Merino Crew Neck" data-image="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="denim" data-price="135" data-name="Relaxed Fit Jeans" data-color="blue">
+                    <a href="product-detail.html?id=relaxed-fit-jeans">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=400&fit=crop" alt="Relaxed fit jeans in light blue" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">Denim</p>
+                        <h3 class="product-name">Relaxed Fit Jeans</h3>
+                        <p class="product-price">$135.00</p>
+                        <button class="add-to-cart" data-product="relaxed-fit-jeans" data-price="135" data-name="Relaxed Fit Jeans" data-image="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="shirts" data-price="95" data-name="Cord Overshirt" data-color="green">
+                    <a href="product-detail.html?id=cord-overshirt">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=400&fit=crop" alt="Corduroy overshirt in olive green" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">Shirts</p>
+                        <h3 class="product-name">Cord Overshirt</h3>
+                        <p class="product-price">$95.00</p>
+                        <button class="add-to-cart" data-product="cord-overshirt" data-price="95" data-name="Cord Overshirt" data-image="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card" data-category="knitwear" data-price="110" data-name="Organic Cotton Hoodie" data-color="grey">
+                    <a href="product-detail.html?id=organic-cotton-hoodie">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop" alt="Organic cotton hoodie in light grey" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">Knitwear</p>
+                        <h3 class="product-name">Organic Cotton Hoodie</h3>
+                        <p class="product-price">$110.00</p>
+                        <button class="add-to-cart" data-product="organic-cotton-hoodie" data-price="110" data-name="Organic Cotton Hoodie" data-image="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+            <p id="noResults" style="display: none; text-align: center; padding: 3rem; color: #666; font-size: 1.2rem;">No products match your filters. Try adjusting your selection.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <section class="footer-section">
+                <h3>NATIVE THREADS</h3>
+                <p>Sustainable fashion for the conscious individual. Premium quality, ethically made since 2020.</p>
+            </section>
+            <section class="footer-section">
+                <h3>Shop</h3>
+                <a href="shop.html">All Products</a>
+                <a href="shop.html?category=t-shirts">T-Shirts</a>
+                <a href="shop.html?category=denim">Denim</a>
+                <a href="shop.html?category=shirts">Shirts</a>
+                <a href="shop.html?category=knitwear">Knitwear</a>
+            </section>
+            <section class="footer-section">
+                <h3>Support</h3>
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping Info</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQs</a>
+            </section>
+            <section class="footer-section">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIVE THREADS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartCount = document.getElementById('cartCount');
+            const priceRange = document.getElementById('price');
+            const priceValue = document.getElementById('priceValue');
+            const filterForm = document.querySelector('.filter-form');
+            const productsGrid = document.getElementById('productsGrid');
+            const noResults = document.getElementById('noResults');
+            const products = Array.from(document.querySelectorAll('.product-card'));
+
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('nativeThreadsCart') || '[]');
+                cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            }
+
+            priceRange.addEventListener('input', function() {
+                priceValue.textContent = '$' + this.value;
+            });
+
+            function applyFilters() {
+                const params = new URLSearchParams(window.location.search);
+                const category = params.get('category') || filterForm.category.value;
+                const color = params.get('color') || filterForm.color.value;
+                const maxPrice = parseFloat(params.get('price') || filterForm.price.value);
+                const sort = params.get('sort') || filterForm.sort.value;
+
+                filterForm.category.value = category;
+                filterForm.color.value = color;
+                filterForm.price.value = maxPrice;
+                filterForm.sort.value = sort;
+                priceValue.textContent = '$' + maxPrice;
+
+                let visible = products.filter(product => {
+                    const pCategory = product.dataset.category;
+                    const pColor = product.dataset.color;
+                    const pPrice = parseFloat(product.dataset.price);
+                    const catMatch = category === 'all' || pCategory === category;
+                    const colorMatch = color === 'all' || pColor === color;
+                    const priceMatch = pPrice <= maxPrice;
+                    return catMatch && colorMatch && priceMatch;
+                });
+
+                if (sort === 'price-low') {
+                    visible.sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
+                } else if (sort === 'price-high') {
+                    visible.sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
+                } else if (sort === 'name') {
+                    visible.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
+                }
+
+                products.forEach(p => p.style.display = 'none');
+                visible.forEach(p => p.style.display = 'block');
+                noResults.style.display = visible.length === 0 ? 'block' : 'none';
+            }
+
+            filterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                applyFilters();
+            });
+
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = {
+                        id: this.dataset.product,
+                        name: this.dataset.name,
+                        price: parseFloat(this.dataset.price),
+                        image: this.dataset.image,
+                        quantity: 1
+                    };
+                    let cart = JSON.parse(localStorage.getItem('nativeThreadsCart') || '[]');
+                    const existing = cart.find(item => item.id === product.id);
+                    if (existing) {
+                        existing.quantity += 1;
+                    } else {
+                        cart.push(product);
+                    }
+                    localStorage.setItem('nativeThreadsCart', JSON.stringify(cart));
+                    updateCartCount();
+                    this.textContent = 'Added!';
+                    setTimeout(() => { this.textContent = 'Add to Cart'; }, 1500);
+                });
+            });
+
+            applyFilters();
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>

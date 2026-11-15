@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NATIVE THREADS - Premium Fashion Brand. Discover sustainable, stylish clothing for the modern individual.">
+    <title>NATIVE THREADS | Premium Fashion Brand</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">NATIVE<span>THREADS</span></a>
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+            <div class="cart-icon" aria-label="Shopping cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">NATIVE THREADS</h1>
+            <p>Sustainable fashion for the conscious individual. Premium quality, ethically made.</p>
+            <a href="shop.html" class="cta-button">Shop Collection</a>
+        </section>
+
+        <section aria-labelledby="featured-title">
+            <h2 class="section-title" id="featured-title">Featured Collection</h2>
+            <div class="featured-grid">
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop" alt="Organic Cotton T-Shirt in natural white" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <p class="product-category">T-Shirts</p>
+                        <h3 class="product-name">Organic Cotton Tee</h3>
+                        <p class="product-price">$45.00</p>
+                        <button class="add-to-cart" data-product="organic-cotton-tee" data-price="45" data-name="Organic Cotton Tee" data-image="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=400&fit=crop" alt="Hemp blend denim jeans in indigo blue" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <p class="product-category">Denim</p>
+                        <h3 class="product-name">Hemp Blend Jeans</h3>
+                        <p class="product-price">$125.00</p>
+                        <button class="add-to-cart" data-product="hemp-blend-jeans" data-price="125" data-name="Hemp Blend Jeans" data-image="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&h=400&fit=crop" alt="Linen button-down shirt in sage green" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <p class="product-category">Shirts</p>
+                        <h3 class="product-name">Linen Button-Down</h3>
+                        <p class="product-price">$85.00</p>
+                        <button class="add-to-cart" data-product="linen-button-down" data-price="85" data-name="Linen Button-Down" data-image="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop" alt="Recycled wool sweater in charcoal grey" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <p class="product-category">Knitwear</p>
+                        <h3 class="product-name">Recycled Wool Sweater</h3>
+                        <p class="product-price">$145.00</p>
+                        <button class="add-to-cart" data-product="recycled-wool-sweater" data-price="145" data-name="Recycled Wool Sweater" data-image="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="features" aria-labelledby="features-title">
+            <h2 id="features-title" class="visually-hidden">Our Features</h2>
+            <article class="feature">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h3>Sustainable Materials</h3>
+                <p>All garments made from organic, recycled, and regenerative fibers.</p>
+            </article>
+            <article class="feature">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </div>
+                <h3>Ethical Production</h3>
+                <p>Fair wages, safe conditions, and transparent supply chains worldwide.</p>
+            </article>
+            <article class="feature">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <h3>Free Shipping</h3>
+                <p>Complimentary worldwide shipping on orders over $150.</p>
+            </article>
+            <article class="feature">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12V7H5V6H5l7 7-7 7H5v-5h16v1z"></path>
+                    </svg>
+                </div>
+                <h3>Easy Returns</h3>
+                <p>30-day hassle-free returns with prepaid shipping labels.</p>
+            </article>
+        </section>
+
+        <section aria-labelledby="newsletter-title" style="text-align: center; padding: 3rem 1rem; background: #1a1a2e; color: white; margin: 0 -2rem 2rem -2rem;">
+            <h2 id="newsletter-title" class="section-title" style="color: white;">Join Our Community</h2>
+            <p style="max-width: 500px; margin: 0 auto 2rem; opacity: 0.9;">Subscribe for exclusive access to new collections, early sales, and sustainability updates.</p>
+            <form style="display: flex; gap: 1rem; max-width: 450px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+                <input type="email" placeholder="Enter your email" required style="flex: 1; min-width: 250px; padding: 1rem; border: none; border-radius: 8px; font-size: 1rem;">
+                <button type="submit" class="cta-button" style="border-radius: 8px;">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <section class="footer-section">
+                <h3>NATIVE THREADS</h3>
+                <p>Sustainable fashion for the conscious individual. Premium quality, ethically made since 2020.</p>
+            </section>
+            <section class="footer-section">
+                <h3>Shop</h3>
+                <a href="shop.html">All Products</a>
+                <a href="shop.html?category=t-shirts">T-Shirts</a>
+                <a href="shop.html?category=denim">Denim</a>
+                <a href="shop.html?category=shirts">Shirts</a>
+                <a href="shop.html?category=knitwear">Knitwear</a>
+            </section>
+            <section class="footer-section">
+                <h3>Support</h3>
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping Info</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQs</a>
+            </section>
+            <section class="footer-section">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIVE THREADS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const cartCount = document.getElementById('cartCount');
+            
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('nativeThreadsCart') || '[]');
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCount.textContent = totalItems;
+            }
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = {
+                        id: this.dataset.product,
+                        name: this.dataset.name,
+                        price: parseFloat(this.dataset.price),
+                        image: this.dataset.image,
+                        quantity: 1
+                    };
+                    
+                    let cart = JSON.parse(localStorage.getItem('nativeThreadsCart') || '[]');
+                    const existingItem = cart.find(item => item.id === product.id);
+                    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cart.push(product);
+                    }
+                    
+                    localStorage.setItem('nativeThreadsCart', JSON.stringify(cart));
+                    updateCartCount();
+                    
+                    this.textContent = 'Added!';
+                    setTimeout(() => {
+                        this.textContent = 'Add to Cart';
+                    }, 1500);
+                });
+            });
+            
+            updateCartCount();
+        });
+    </script>
+    <style>
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</body>
+</html>

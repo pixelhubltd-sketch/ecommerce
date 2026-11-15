@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your NATIVE THREADS purchase securely.">
+    <title>Checkout | NATIVE THREADS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">NATIVE<span>THREADS</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html" aria-current="page">Checkout</a></li>
+            </ul>
+            <div class="cart-icon" aria-label="Shopping cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-title" style="text-align: left;">Checkout</h1>
+
+        <div id="emptyCheckout" style="display: none; text-align: center; padding: 4rem 1rem;">
+            <h2 style="margin-bottom: 1rem; color: #1a1a2e;">Your cart is empty</h2>
+            <p style="color: #666; margin-bottom: 2rem;">Add some items before checking out.</p>
+            <a href="shop.html" class="cta-button">Browse Products</a>
+        </div>
+
+        <div id="checkoutContent" class="checkout-form">
+            <div>
+                <form id="checkoutForm" novalidate>
+                    <section class="form-section" aria-labelledby="contact-title">
+                        <h2 id="contact-title">Contact Information</h2>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required aria-required="true">
+                        </div>
+                    </section>
+
+                    <section class="form-section" aria-labelledby="shipping-title" style="margin-top: 2rem;">
+                        <h2 id="shipping-title">Shipping Address</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Jane" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Doe" required aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" name="address" placeholder="123 Main Street" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="address2">Apartment, Suite, etc. (Optional)</label>
+                            <input type="text" id="address2" name="address2" placeholder="Apt 4B">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" placeholder="New York" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State / Province</label>
+                                <input type="text" id="state" name="state" placeholder="NY" required aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="zip">ZIP / Postal Code</label>
+                                <input type="text" id="zip" name="zip" placeholder="10001" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country" name="country" required aria-required="true">
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                    <option value="NG">Nigeria</option>
+                                    <option value="ZA">South Africa</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="form-section" aria-labelledby="payment-title" style="margin-top: 2rem;">
+                        <h2 id="payment-title">Payment Method</h2>
+                        <div class="payment-methods" role="radiogroup" aria-labelledby="payment-title">
+                            <label class="payment-option selected">
+                                <input type="radio" name="payment" value="card" checked>
+                                <span>Credit / Debit Card</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="paypal">
+                                <span>PayPal</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="applepay">
+                                <span>Apple Pay</span>
+                            </label>
+                        </div>
+
+                        <div id="cardFields">
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number</label>
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" inputmode="numeric" autocomplete="cc-number">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry">Expiry Date</label>
+                                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" inputmode="numeric" autocomplete="cc-exp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" inputmode="numeric" autocomplete="cc-csc">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <button type="submit" class="place-order-btn">Place Order</button>
+                </form>
+            </div>
+
+            <aside class="order-summary" aria-labelledby="order-summary-title">
+                <h2 id="order-summary-title">Order Summary</h2>
+                <div id="orderItems"></div>
+                <div class="summary-row" style="margin-top: 1.5rem;">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (8%)</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </aside>
+        </div>
+
+        <div id="orderConfirmation" style="display: none; text-align: center; padding: 4rem 1rem; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            <div style="width: 80px; height: 80px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+            </div>
+            <h2 style="color: #1a1a2e; font-size: 2rem; margin-bottom: 1rem;">Order Confirmed!</h2>
+            <p style="color: #666; margin-bottom: 0.5rem;">Thank you for your purchase.</p>
+            <p style="color: #666; margin-bottom: 2rem;">Your order number is <strong id="orderNumber">#NT-00000</strong></p>
+            <p style="color: #666; margin-bottom: 2rem;">A confirmation email has been sent to <strong id="confirmEmail">your email</strong>.</p>
+            <a href="index.html" class="cta-button">Continue Shopping</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <section class="footer-section">
+                <h3>NATIVE THREADS</h3>
+                <p>Sustainable fashion for the conscious individual. Premium quality, ethically made since 2020.</p>
+            </section>
+            <section class="footer-section">
+                <h3>Shop</h3>
+                <a href="shop.html">All Products</a>
+                <a href="shop.html?category=t-shirts">T-Shirts</a>
+                <a href="shop.html?category=denim">Denim</a>
+                <a href="shop.html?category=shirts">Shirts</a>
+                <a href="shop.html?category=knitwear">Knitwear</a>
+            </section>
+            <section class="footer-section">
+                <h3>Support</h3>
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping Info</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQs</a>
+            </section>
+            <section class="footer-section">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIVE THREADS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartCount = document.getElementById('cartCount');
+            const emptyCheckout = document.getElementById('emptyCheckout');
+            const checkoutContent = document.getElementById('checkoutContent');
+            const orderConfirmation = document.getElementById('orderConfirmation');
+            const checkoutForm = document.getElementById('checkoutForm');
+
+            function getCart() {
+                return JSON.parse(localStorage.getItem('nativeThreadsCart') || '[]');
+            }
+
+            function renderSummary() {
+                const cart = getCart();
+                cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+                if (cart.length === 0) {
+                    emptyCheckout.style.display = 'block';
+                    checkoutContent.style.display = 'none';
+                    return;
+                }
+
+                emptyCheckout.style.display = 'none';
+                checkoutContent.style.display = 'grid';
+
+                const orderItems = document.getElementById('orderItems');
+                orderItems.innerHTML = cart.map(item => `
+                    <div class="order-item">
+                        <div class="order-item-info">
+                            <h4>${item.name}</h4>
+                            <p class="item-meta">${item.size ? 'Size ' + item.size + ' · ' : ''}Qty ${item.quantity}</p>
+                        </div>
+                        <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                    </div>
+                `).join('');
+
+                const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                const shipping = subtotal >= 150 ? 0 : 10;
+                const tax = subtotal * 0.08;
+                const total = subtotal + shipping + tax;
+
+                document.getElementById('subtotal').textContent = '$' + subtotal.toFixed(2);
+                document.getElementById('shipping').textContent = shipping === 0 ? 'FREE' : '$' + shipping.toFixed(2);
+                document.getElementById('tax').textContent = '$' + tax.toFixed(2);
+                document.getElementById('total').textContent = '$' + total.toFixed(2);
+            }
+
+            document.querySelectorAll('.payment-option input').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('selected'));
+                    this.closest('.payment-option').classList.add('selected');
+                    document.getElementById('cardFields').style.display = this.value === 'card' ? 'block' : 'none';
+                });
+            });
+
+            checkoutForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const required = ['email', 'phone', 'firstName', 'lastName', 'address', 'city', 'state', 'zip', 'country'];
+                let valid = true;
+                required.forEach(id => {
+                    const field = document.getElementById(id);
+                    if (!field.value.trim()) {
+                        field.style.borderColor = '#e94560';
+                        valid = false;
+                    } else {
+                        field.style.borderColor = '#ddd';
+                    }
+                });
+
+                if (!valid) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
+                const orderNumber = '#NT-' + Math.floor(10000 + Math.random() * 90000);
+                document.getElementById('orderNumber').textContent = orderNumber;
+                document.getElementById('confirmEmail').textContent = document.getElementById('email').value;
+
+                localStorage.removeItem('nativeThreadsCart');
+                cartCount.textContent = '0';
+
+                checkoutContent.style.display = 'none';
+                orderConfirmation.style.display = 'block';
+                window.scrollTo(0, 0);
+            });
+
+            renderSummary();
+        });
+    </script>
+</body>
+</html>

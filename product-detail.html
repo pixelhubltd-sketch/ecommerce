@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View product details and add to cart - NATIVE THREADS sustainable fashion.">
+    <title>Product Detail | NATIVE THREADS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">NATIVE<span>THREADS</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+            <div class="cart-icon" aria-label="Shopping cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #666;">
+            <a href="index.html" style="color: #e94560; text-decoration: none;">Home</a>
+            <span> / </span>
+            <a href="shop.html" style="color: #e94560; text-decoration: none;">Shop</a>
+            <span> / </span>
+            <span id="breadcrumbName">Organic Cotton Tee</span>
+        </nav>
+
+        <article class="product-detail">
+            <section class="product-gallery" aria-label="Product images">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop" alt="Organic Cotton Tee main view" class="main-image" id="mainImage">
+                <div class="thumbnail-grid">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop" alt="Organic Cotton Tee front view" class="thumbnail active">
+                    <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=800&h=800&fit=crop" alt="Organic Cotton Tee detail view" class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&h=800&fit=crop" alt="Organic Cotton Tee back view" class="thumbnail">
+                </div>
+            </section>
+
+            <section class="product-details" aria-labelledby="productName">
+                <p class="category" id="productCategory">T-Shirts</p>
+                <h1 id="productName">Organic Cotton Tee</h1>
+                <p class="price" id="productPrice">$45.00</p>
+                <p class="description" id="productDescription">
+                    Crafted from 100% GOTS-certified organic cotton, this essential tee offers exceptional softness and breathability. Our signature relaxed fit is designed for everyday comfort while maintaining a refined silhouette. Pre-washed for minimal shrinkage and dyed using low-impact, OEKO-TEX certified processes.
+                </p>
+
+                <div class="size-selector">
+                    <label id="sizeLabel">Select Size</label>
+                    <div class="size-options" role="radiogroup" aria-labelledby="sizeLabel">
+                        <button type="button" class="size-option" data-size="XS" aria-pressed="false">XS</button>
+                        <button type="button" class="size-option selected" data-size="M" aria-pressed="true">M</button>
+                        <button type="button" class="size-option" data-size="L" aria-pressed="false">L</button>
+                        <button type="button" class="size-option" data-size="XL" aria-pressed="false">XL</button>
+                    </div>
+                </div>
+
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="10" aria-label="Quantity">
+                </div>
+
+                <button class="add-to-cart-large" id="addToCartBtn">Add to Cart</button>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: #1a1a2e;">Product Details</h3>
+                    <ul style="color: #555; line-height: 2; padding-left: 1.2rem;">
+                        <li>100% GOTS-certified organic cotton</li>
+                        <li>Relaxed, unisex fit</li>
+                        <li>Low-impact, OEKO-TEX certified dyes</li>
+                        <li>Pre-washed to prevent shrinkage</li>
+                        <li>Ethically made in Portugal</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <section aria-labelledby="related-title" style="margin-top: 4rem;">
+            <h2 class="section-title" id="related-title">You May Also Like</h2>
+            <div class="featured-grid">
+                <article class="product-card">
+                    <a href="product-detail.html?id=hemp-blend-jeans">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=400&fit=crop" alt="Hemp Blend Jeans" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">Denim</p>
+                        <h3 class="product-name">Hemp Blend Jeans</h3>
+                        <p class="product-price">$125.00</p>
+                        <a href="product-detail.html?id=hemp-blend-jeans" class="cta-button" style="display:block; text-align:center; padding: 0.8rem; border-radius: 8px; font-size: 1rem;">View Product</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <a href="product-detail.html?id=linen-button-down">
+                        <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&h=400&fit=crop" alt="Linen Button-Down" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">Shirts</p>
+                        <h3 class="product-name">Linen Button-Down</h3>
+                        <p class="product-price">$85.00</p>
+                        <a href="product-detail.html?id=linen-button-down" class="cta-button" style="display:block; text-align:center; padding: 0.8rem; border-radius: 8px; font-size: 1rem;">View Product</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <a href="product-detail.html?id=recycled-wool-sweater">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop" alt="Recycled Wool Sweater" class="product-image" loading="lazy">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-category">Knitwear</p>
+                        <h3 class="product-name">Recycled Wool Sweater</h3>
+                        <p class="product-price">$145.00</p>
+                        <a href="product-detail.html?id=recycled-wool-sweater" class="cta-button" style="display:block; text-align:center; padding: 0.8rem; border-radius: 8px; font-size: 1rem;">View Product</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <section class="footer-section">
+                <h3>NATIVE THREADS</h3>
+                <p>Sustainable fashion for the conscious individual. Premium quality, ethically made since 2020.</p>
+            </section>
+            <section class="footer-section">
+                <h3>Shop</h3>
+                <a href="shop.html">All Products</a>
+                <a href="shop.html?category=t-shirts">T-Shirts</a>
+                <a href="shop.html?category=denim">Denim</a>
+                <a href="shop.html?category=shirts">Shirts</a>
+                <a href="shop.html?category=knitwear">Knitwear</a>
+            </section>
+            <section class="footer-section">
+                <h3>Support</h3>
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping Info</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQs</a>
+            </section>
+            <section class="footer-section">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NATIVE THREADS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const productCatalog = {
+            'organic-cotton-tee': {
+                name: 'Organic Cotton Tee', category: 'T-Shirts', price: 45,
+                image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop',
+                description: 'Crafted from 100% GOTS-certified organic cotton, this essential tee offers exceptional softness and breathability. Our signature relaxed fit is designed for everyday comfort while maintaining a refined silhouette. Pre-washed for minimal shrinkage and dyed using low-impact, OEKO-TEX certified processes.'
+            },
+            'hemp-blend-jeans': {
+                name: 'Hemp Blend Jeans', category: 'Denim', price: 125,
+                image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&h=800&fit=crop',
+                description: 'Our hemp blend jeans combine durability with sustainability. Made from a proprietary blend of hemp and organic cotton, these jeans offer a vintage-inspired fit with modern comfort. Naturally antimicrobial and requiring less water to produce than conventional denim.'
+            },
+            'linen-button-down': {
+                name: 'Linen Button-Down', category: 'Shirts', price: 85,
+                image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&h=800&fit=crop',
+                description: 'Woven from European flax linen, this breathable button-down is perfect for warmer days. The natural texture and relaxed drape create an effortlessly refined look. Features mother-of-pearl buttons and a classic spread collar.'
+            },
+            'recycled-wool-sweater': {
+                name: 'Recycled Wool Sweater', category: 'Knitwear', price: 145,
+                image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&h=800&fit=crop',
+                description: 'A classic crewneck reimagined with 100% recycled wool. This cozy sweater delivers warmth without the environmental cost of virgin wool production. The mid-weight knit is perfect for layering, with a relaxed fit and ribbed cuffs and hem.'
+            },
+            'recycled-down-jacket': {
+                name: 'Recycled Down Jacket', category: 'Outerwear', price: 195,
+                image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&h=800&fit=crop',
+                description: 'Engineered for warmth in the coldest conditions, this jacket uses 100% recycled down insulation and a recycled ripstop shell. Lightweight yet incredibly warm, it packs down small for easy travel. Water-resistant finish keeps you dry in light precipitation.'
+            },
+            'merino-crew-neck': {
+                name: 'Merino Crew Neck', category: 'T-Shirts', price: 55,
+                image: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&h=800&fit=crop',
+                description: 'Fine-gauge merino wool elevates the basic tee. Naturally temperature-regulating, odor-resistant, and incredibly soft against the skin. This versatile crew neck transitions seamlessly from the office to the outdoors.'
+            },
+            'relaxed-fit-jeans': {
+                name: 'Relaxed Fit Jeans', category: 'Denim', price: 135,
+                image: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&h=800&fit=crop',
+                description: 'Cut for comfort, these relaxed fit jeans feature a straight leg and mid-rise waist. Made from organic cotton with a touch of stretch for ease of movement. Finished with a stonewashed effect for a lived-in look from day one.'
+            },
+            'cord-overshirt': {
+                name: 'Cord Overshirt', category: 'Shirts', price: 95,
+                image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&h=800&fit=crop',
+                description: 'A versatile layering piece in soft organic cotton corduroy. Wear it as a shirt or light jacket. Features a button-front closure, chest pockets, and a relaxed fit that works over tees and sweaters alike.'
+            },
+            'organic-cotton-hoodie': {
+                name: 'Organic Cotton Hoodie', category: 'Knitwear', price: 110,
+                image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&h=800&fit=crop',
+                description: 'The ultimate everyday hoodie in heavyweight organic cotton fleece. Brushed interior for extra softness, with a double-lined hood and kangaroo pocket. Pre-shrunk and garment-dyed for a rich, lasting color.'
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id') || 'organic-cotton-tee';
+            const product = productCatalog[id] || productCatalog['organic-cotton-tee'];
+
+            document.getElementById('productName').textContent = product.name;
+            document.getElementById('productCategory').textContent = product.category;
+            document.getElementById('productPrice').textContent = '$' + product.price.toFixed(2);
+            document.getElementById('productDescription').textContent = product.description;
+            document.getElementById('mainImage').src = product.image;
+            document.getElementById('mainImage').alt = product.name;
+            document.getElementById('breadcrumbName').textContent = product.name;
+            document.title = product.name + ' | NATIVE THREADS';
+
+            const cartCount = document.getElementById('cartCount');
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('nativeThreadsCart') || '[]');
+                cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            }
+
+            let selectedSize = 'M';
+            let currentQuantity = 1;
+
+            document.querySelectorAll('.size-option').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.size-option').forEach(b => {
+                        b.classList.remove('selected');
+                        b.setAttribute('aria-pressed', 'false');
+                    });
+                    this.classList.add('selected');
+                    this.setAttribute('aria-pressed', 'true');
+                    selectedSize = this.dataset.size;
+                });
+            });
+
+            document.getElementById('quantity').addEventListener('change', function() {
+                currentQuantity = Math.max(1, Math.min(10, parseInt(this.value) || 1));
+                this.value = currentQuantity;
+            });
+
+            document.getElementById('addToCartBtn').addEventListener('click', function() {
+                const cartId = id + '-' + selectedSize;
+                let cart = JSON.parse(localStorage.getItem('nativeThreadsCart') || '[]');
+                const existing = cart.find(item => item.id === cartId);
+                if (existing) {
+                    existing.quantity += currentQuantity;
+                } else {
+                    cart.push({
+                        id: cartId,
+                        name: product.name,
+                        price: product.price,
+                        image: product.image,
+                        size: selectedSize,
+                        quantity: currentQuantity
+                    });
+                }
+                localStorage.setItem('nativeThreadsCart', JSON.stringify(cart));
+                updateCartCount();
+                this.textContent = 'Added to Cart!';
+                setTimeout(() => { this.textContent = 'Add to Cart'; }, 1500);
+            });
+
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    document.getElementById('mainImage').src = this.src;
+                });
+            });
+
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>
